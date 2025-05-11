@@ -57,8 +57,6 @@ print(ejemplo2);
 const String ejemplo3 = "My friend";
 print(ejemplo3);             
 
-
-
 // Conversiones 
 // String a Número
 String numero = "1";
@@ -74,4 +72,23 @@ print(yaconvertido);
 String aDouble = "20.200001";
 double yaConvertido = double.parse(aDouble);
 print(yaConvertido);
+
+// Operaciones Matemáticas
+int numA = 100;
+int numB = 12;
+int suma = numA + numB;
+print("La suma de ambos números es $suma");
+
+int resta = numA - numB;
+int multi = numA * numB;
+double divi = numA / numB;
+int diviSinDecimal = numA ~/ numB;
+int modulO = numA % numB;
+
+print("La resta de ambos números es: $resta");
+print("La multiplicación de ambos números es: $multi");
+print("La división de ambos números es: $divi");
+print("La división sin decimales es: $diviSinDecimal");
+print("El modulo de ambos números es: $modulO");
+
 }
