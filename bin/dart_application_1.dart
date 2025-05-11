@@ -55,6 +55,23 @@ final String ejemplo2 = "Hello";
 print(ejemplo2);
 
 const String ejemplo3 = "My friend";
-print(ejemplo3);
+print(ejemplo3);             
 
+
+
+// Conversiones 
+// String a Número
+String numero = "1";
+int numero1 = int.parse(numero);
+print("El número es $numero1");
+
+// Número a String
+int aString = 200;
+String yaconvertido = aString.toString();
+print(yaconvertido);
+
+// String a Double
+String aDouble = "20.200001";
+double yaConvertido = double.parse(aDouble);
+print(yaConvertido);
 }
