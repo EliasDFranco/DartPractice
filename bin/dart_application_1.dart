@@ -178,4 +178,56 @@ print("Introduce tu año de nacimiento: ");
 String nacimiento = stdin.readLineSync()!;
 print("Tu año de nacimiento es: $nacimiento");
 
+// Estructuras Condicionales; 
+int x = 17;
+if (x >= 18) {
+  print("Usted es mayor de edad, puede entrar a la discoteca");
+}
+else {
+  print("Usted no es mayor de edad, no puede entrar a la discoteca");
+}
+
+print("\n");
+
+int experienciaTrabajo = 5; 
+if (experienciaTrabajo >= 10) {
+  print("Usted es un trabajador Senior Level");
+} 
+else if(experienciaTrabajo >  5) {
+  print("Usted es un tranador Mid Level");
+}
+else { 
+  print("Usted es un trabajador Junior Level");
+
+print("\n");
+
+// Operador Ternario;
+(x >= 18) ? print("Usted es mayor de edad") : print("Usted no es mayor de edad ");
+// Aquí el signo de interrogación(?) funciona como un if | Los dos puntos(:) como un else
+
+print("Introduce un día de la semana");
+int numeroSemana = int.parse(stdin.readLineSync()!);
+if(numeroSemana == 1){
+print("Hoy es domingo");
+} else if (numeroSemana == 2 ){
+  print("Hoy es lunes");
+}
+  else if(numeroSemana == 3){
+    print("Hoy es martes");
+  }
+  else if( numeroSemana == 4){
+    print("Hoy es miercoles");
+  }
+  else if ( numeroSemana == 5 ){
+    print("Hoy es jueves");
+  }
+  else if ( numeroSemana == 6 ){
+    print("Hoy es viernes");
+  }
+  else {
+    print("Hoy es sábado");
+  }
+}
+
+
 }
