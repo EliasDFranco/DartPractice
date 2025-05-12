@@ -235,6 +235,8 @@ print("Hoy es domingo");
   }
 }
 
+print("\n");
+
   // Swicht 
 print("Introduce un mes del año (1 al 6)");
 int numeroMes = int.parse(stdin.readLineSync()!);
@@ -264,6 +266,31 @@ switch(numeroMes){
     break;
   default:
     print("Número no válido, ingrese del 1 al 6");
+}
+
+print("\n");
+/*
+Ejercicio N° 3 - Identificar números positivos y negativos.
+
+Objetivo: 
+  Escribe un programa en Dart que determine si un número es positivo, negativo o cero.
+
+*/
+
+print("Ingrese un número, por favor");
+int numIngresado = int.parse(stdin.readLineSync()!);
+
+if (numIngresado > 0) {
+  print("El número ingresado es positivo");
+}
+else if(numIngresado < 0){
+  print("El número ingresado es negativo");
+}
+else if (numIngresado == 0){
+  print("El número es 0");
+}
+else {
+  print("Por favor ingrese un valor númerico");
 }
 
 }
