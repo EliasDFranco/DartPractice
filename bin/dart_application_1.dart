@@ -1,3 +1,5 @@
+import 'dart:io'; // Al usar stdin , automáticamente nos importa dart:io
+
 import 'package:dart_application_1/dart_application_1.dart' as dart_application_1;
 
 void main(List<String> arguments) {
@@ -168,5 +170,12 @@ String resultadoFinal = (precioConPropina/numPersonas).toStringAsFixed(2);
 
 print("El precio total a pagar sumado la propina es: $precioConPropina. Cada persona debe de pagar $resultadoFinal");
 
+print("\n"); 
+
+
+// Entrada de Datos: 
+print("Introduce tu año de nacimiento: ");
+String nacimiento = stdin.readLineSync()!;
+print("Tu año de nacimiento es: $nacimiento");
 
 }
