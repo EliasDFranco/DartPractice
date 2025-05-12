@@ -91,4 +91,28 @@ print("La división de ambos números es: $divi");
 print("La división sin decimales es: $diviSinDecimal");
 print("El modulo de ambos números es: $modulO");
 
+print("\n");
+/*
+EJERCICIO N° 1 - Calculadora de edad
+Objetivo:
+  Escribe un programa en Dart que pida al usuario su año 
+  de nacimiento y calcule su edad actual.
+
+Pasos a seguir; 
+  1)Pedir al usuario su año de nacimiento (leerlo como String).
+  2)Convertir el año de nacimiento en un número entero.
+  3)Calcular la edad restando el año de nacimiento al año actual (2025).
+  4)Mostrar el resultado en un mensaje como "Tienes x años".
+*/
+
+String yearNacimiento = "2004";
+String nombre = "Elias";
+int convertidorInt = int.parse(yearNacimiento);
+print("El año de nacimiento es: $convertidorInt");
+int yearActual = 2025;
+int calculadoraEdad = yearActual - convertidorInt; 
+print("La edad actual de $nombre es $calculadoraEdad años" );
+
+print("\n");
+
 }
