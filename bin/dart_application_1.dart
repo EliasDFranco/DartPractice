@@ -205,6 +205,9 @@ print("\n");
 (x >= 18) ? print("Usted es mayor de edad") : print("Usted no es mayor de edad ");
 // Aquí el signo de interrogación(?) funciona como un if | Los dos puntos(:) como un else
 
+
+// Estructuras Condicionales 
+  // IF - ELSE IF - ELSE;
 print("Introduce un día de la semana");
 int numeroSemana = int.parse(stdin.readLineSync()!);
 if(numeroSemana == 1){
@@ -232,6 +235,7 @@ print("Hoy es domingo");
   }
 }
 
+  // Swicht 
 print("Introduce un mes del año (1 al 6)");
 int numeroMes = int.parse(stdin.readLineSync()!);
 switch(numeroMes){
@@ -258,6 +262,8 @@ switch(numeroMes){
   case 6: 
     print("Junio");
     break;
+  default:
+    print("Número no válido, ingrese del 1 al 6");
 }
 
 }
