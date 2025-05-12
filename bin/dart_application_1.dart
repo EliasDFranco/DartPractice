@@ -224,10 +224,40 @@ print("Hoy es domingo");
   else if ( numeroSemana == 6 ){
     print("Hoy es viernes");
   }
-  else {
+  else if (numeroSemana == 7) {
     print("Hoy es sábado");
+  }
+  else {
+    print("El número que ha proporcionado es inválido.");
   }
 }
 
+print("Introduce un mes del año (1 al 6)");
+int numeroMes = int.parse(stdin.readLineSync()!);
+switch(numeroMes){
+  case 1: 
+    print("Enero");
+    break;
+
+  case 2: 
+    print("Febrero");
+    break;
+
+  case 3: 
+    print("Marzo");
+    break;
+
+  case 4:
+    print("Abril");
+    break;
+
+  case 5: 
+    print("Mayo");
+    break;
+  
+  case 6: 
+    print("Junio");
+    break;
+}
 
 }
