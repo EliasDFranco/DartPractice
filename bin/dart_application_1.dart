@@ -18,6 +18,8 @@ void main(List<String> arguments) {
   alumno = "Marcos";
   print(alumno);
 
+print("\n");
+
   // Tipos de Variables
   int edad2 = 30; // Declarando una variable de tipo INT para que sepa que solo es int
   double altura2 = 31.1;  // Declarando una variable de tipo DOUBLE
@@ -26,11 +28,14 @@ void main(List<String> arguments) {
   num age3 = 31;
   num altura3 = 32.1; 
   
+print("\n");
 
   // Variables de cadenas de texto - Strings
 String apellido = 'Franco';
 apellido = "Duarte";
 apellido = "Ovelar";
+
+print("\n");
 
 // Concatenación 
 String concatena = alumno + apellido;
@@ -39,9 +44,13 @@ print(concatena);
 String concatena2 = "Nombre: $alumno , Apellido: $apellido, Edad: $edad, Altura: $altura ";
 print(concatena2);
 
+print("\n");
+
 // Variables Booleanas
 bool soyFeliz = true;
 bool estoyTriste = false;
+
+print("\n");
 
 // Variables Tipo Dinámico
 
@@ -50,12 +59,16 @@ print(ejemplo);
 ejemplo = 90;
 print(ejemplo);
 
+print("\n");
+
 // Tipos Fijos 
 final String ejemplo2 = "Hello";
 print(ejemplo2);
 
 const String ejemplo3 = "My friend";
 print(ejemplo3);             
+
+print("\n");
 
 // Conversiones 
 // String a Número
@@ -72,6 +85,8 @@ print(yaconvertido);
 String aDouble = "20.200001";
 double yaConvertido = double.parse(aDouble);
 print(yaConvertido);
+
+print("\n");
 
 // Operaciones Matemáticas
 int numA = 100;
@@ -114,5 +129,44 @@ int calculadoraEdad = yearActual - convertidorInt;
 print("La edad actual de $nombre es $calculadoraEdad años" );
 
 print("\n");
+
+/*
+Ejercicio N° 2 - Calculadora de Propina
+
+Objetivo:
+  Escribe un programa en Dart que calcule cuánto debe de pagar cada persona después 
+  de dividir la cuenta y agregar una propina.
+
+Pasos a seguir:
+  1)Pedir al usuario el total de la cuenta.
+  2)Pedir el porcentaje de propina a agregar.
+  3)Calcular el total a pagar sumando la propina.
+  4)Pedir el número de personas para dividir la cuenta.
+  5)Calcular cuánto debe pagar cada persona.
+  6)Mostrar el resultado en la pantalla.
+  
+*/
+// Primera forma, un poco líoso pero funciona; 
+double numTotalCuenta = 200000;
+print("El número total de la cuenta es: $numTotalCuenta");
+double porcentajePropina = numTotalCuenta * 0.15;
+double totalPagar = numTotalCuenta + porcentajePropina;
+print("Total a pagar con propina incluido: $totalPagar");
+const cantidadPersonas = 4; 
+double totalPagarXPersona = totalPagar / cantidadPersonas;
+print("Si están $cantidadPersonas cada uno debe de pagar: $totalPagarXPersona");
+
+print("\n");
+
+// Segunda forma de hacer;
+double total_Pagar = 20000; 
+double Propina = 0.15;
+int numPersonas = 4; 
+
+double precioConPropina = (total_Pagar * (Propina/100) + total_Pagar);
+String resultadoFinal = (precioConPropina/numPersonas).toStringAsFixed(2);
+
+print("El precio total a pagar sumado la propina es: $precioConPropina. Cada persona debe de pagar $resultadoFinal");
+
 
 }
