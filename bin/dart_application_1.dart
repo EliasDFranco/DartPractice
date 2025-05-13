@@ -4,14 +4,8 @@ import 'package:dart_application_1/dart_application_1.dart' as dart_application_
 
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-
+ejemplosListas();
 }
-
-/*
-+-------------------------------------------------+
-|              PRINTS                             |
-+-------------------------------------------------+
-*/
 
 // Creando un nuevo método para hacer nuevas cosas:
 void saludar(List<String> arguments){
@@ -288,6 +282,57 @@ int funcionChica(int a, int b) => a + b;
 
 void opcionalFuncion ({String nombre = "Liza", int edad = 34}){
   print("El nombre es: $nombre, Edad: $edad");
+}
+
+/*
++-------------------------------------------------+
+|              ESTRUCTURAS DE DATOS               |
+|             LISTAS - SETS - MAPAS               |
++-------------------------------------------------+
+*/
+void ejemplosListas(){
+ // Formas de hacer listas: 
+  List<String>  nombresEstudiantes = ["Elias", "Rapai", "Yisus","Magnate", "Pablo", "Daniel"]; // Forma recomendada
+    print(nombresEstudiantes[4]);
+  var nombres2 = ["Juan", "Pedro", "Edgar"];
+
+  nombres2[2] = "José José";
+// Formas de encontrar los parámetros que se necesita;
+print(nombresEstudiantes.last); // Para encontrar el último elemento de una lista
+
+print(nombresEstudiantes.first); // Para encontrar el primer elemento de una lista
+
+print(nombres2.length); // Para encontrar el valor de la lista por longitud, es decir cuantos valores tiene la lista.
+                        // En este caso, nombres2 tiene 3 valores.
+
+print(nombres2[2]); // Se puede modificar los datos de la lista, cuando se lo necesite.
+
+// Para agregar datos o elementos a nuestra lista; 
+nombres2.add("Kurapika"); 
+nombresEstudiantes.add("Gon");
+print(nombresEstudiantes);
+print(nombres2);
+
+// Para eliminar datos o elementos de nuestra lista
+nombres2.remove("Pedro");
+print(nombres2);
+
+// Para listar elementos de una o más listas
+nombresEstudiantes.addAll(nombres2);
+print(nombresEstudiantes);
+
+// Para remover por posición del elemento
+nombres2.removeAt(2);
+print(nombres2);
+
+// Para eliminar absolutamente todos los elementos de una lista;
+nombres2.clear();
+print("Todos los objetos han sido eliminados correctamente: $nombres2");
+
+// Para añadir un elemento en una posición sin la necesidad de reemplazar el actual.
+nombres2.insert(2, "Fátima");
+print(" Se ha añadido un nuevo elemento: $nombres2");
+
 }
 
 /*
