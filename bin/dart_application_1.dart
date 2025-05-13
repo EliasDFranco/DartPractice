@@ -4,7 +4,7 @@ import 'package:dart_application_1/dart_application_1.dart' as dart_application_
 
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-ejemplosSet();
+ejemplosMapas();
 }
 
 // Creando un nuevo método para hacer nuevas cosas:
@@ -361,6 +361,39 @@ print(nuevoSetBuscados);
 
 }
 
+void ejemplosMapas(){
+Map<String, int> personas = {
+"Elias":20,
+"Gon": 15,
+"Kurapika": 17,
+"Killua": 15,
+"Leorio": 18
+};
+print(personas);
+print(personas["Kurapika"]);
+print(personas["Leorio"]);
+
+
+personas["Killua"] = 16;
+print(personas["Killua"]);
+personas.addAll({"Hisoka": 29});
+print(personas);
+
+personas.remove("Killua");
+print(personas);
+
+print(personas.keys); // KEYS para ver todas las llaves del mapa
+
+print(personas.values); // VALUES para ver todos los valores del mapa
+
+personas.containsKey("Hisoka"); // Para saber si existe una KEY, se usa constainsKey
+print(personas.keys);
+
+personas.containsValue(16);  // Para saber si existe un valor, se usa constainsValue
+print(personas.values);
+
+print(personas);
+}
 
 /*
 +-------------------------------------------------+
