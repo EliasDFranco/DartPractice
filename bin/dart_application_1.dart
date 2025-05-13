@@ -3,7 +3,8 @@ import 'dart:io'; // Al usar stdin , automáticamente nos importa dart:io
 import 'package:dart_application_1/dart_application_1.dart' as dart_application_1;
 
 void main(List<String> arguments) {
-  
+// En esta función main vamos a poder llamar las otras, según la necesitemos
+
 }
 
 /*
@@ -255,6 +256,38 @@ switch(numeroMes){
 }
 
 print("\n");
+}
+
+/*
++-------------------------------------------------+
+|              MÉTODOS                            |
++-------------------------------------------------+
+*/
+
+void simpleFuncion(){
+  print("Esto es un ejemplo");
+}
+
+void inputFuncion(int a, int b){
+  int resultado = a + b;
+  print("La suma de ambos números es: $resultado");
+}
+
+int outputFuncion(){
+  int a = 10;
+  int b = 5; 
+  int resultado = a - b;
+  return resultado;
+}
+
+int funcionCompleta(int a, int b){
+  return a + b;
+}
+
+int funcionChica(int a, int b) => a + b;
+
+void opcionalFuncion ({String nombre = "Liza", int edad = 34}){
+  print("El nombre es: $nombre, Edad: $edad");
 }
 
 /*
