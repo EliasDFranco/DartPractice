@@ -3,6 +3,17 @@ import 'dart:io'; // Al usar stdin , automáticamente nos importa dart:io
 import 'package:dart_application_1/dart_application_1.dart' as dart_application_1;
 
 void main(List<String> arguments) {
+  
+}
+
+/*
++-------------------------------------------------+
+|              PRINTS                             |
++-------------------------------------------------+
+*/
+
+// Creando un nuevo método para hacer nuevas cosas:
+void saludar(List<String> arguments){
 // realizando impresiones
   print('Hola, este es mi nuevo projecto en Dart, soy Elias D. Franco');
   print('Soy un programador Jr. BackEnd, estoy probando Dart');
@@ -22,7 +33,17 @@ void main(List<String> arguments) {
 
 print("\n");
 
-  // Tipos de Variables
+}
+
+/*
++-------------------------------------------------+
+|              TIPOS VARIABLES                    |
++-------------------------------------------------+
+*/
+
+void tiposVariables(List<String> arguments){
+ // Tipos de Variables
+  String alumno = "Martin";
   int edad2 = 30; // Declarando una variable de tipo INT para que sepa que solo es int
   double altura2 = 31.1;  // Declarando una variable de tipo DOUBLE
 
@@ -43,7 +64,7 @@ print("\n");
 String concatena = alumno + apellido;
 print(concatena);
 
-String concatena2 = "Nombre: $alumno , Apellido: $apellido, Edad: $edad, Altura: $altura ";
+String concatena2 = "Nombre: $alumno , Apellido: $apellido, Edad: $edad2, Altura: $altura2 ";
 print(concatena2);
 
 print("\n");
@@ -72,7 +93,17 @@ print(ejemplo3);
 
 print("\n");
 
-// Conversiones 
+}
+
+
+/*
++-------------------------------------------------+
+|              CONVERSIONES                       |
++-------------------------------------------------+
+*/
+
+void conversiones(List<String> arguments){
+  // Conversiones 
 // String a Número
 String numero = "1";
 int numero1 = int.parse(numero);
@@ -90,7 +121,16 @@ print(yaConvertido);
 
 print("\n");
 
-// Operaciones Matemáticas
+}
+
+/*
++-------------------------------------------------+
+|              OPERACIONES MATEMÁTICAS            |
++-------------------------------------------------+
+*/
+
+void operacionesMatematicas(){
+  // Operaciones Matemáticas
 int numA = 100;
 int numB = 12;
 int suma = numA + numB;
@@ -109,71 +149,17 @@ print("La división sin decimales es: $diviSinDecimal");
 print("El modulo de ambos números es: $modulO");
 
 print("\n");
-/*
-EJERCICIO N° 1 - Calculadora de edad
-Objetivo:
-  Escribe un programa en Dart que pida al usuario su año 
-  de nacimiento y calcule su edad actual.
-
-Pasos a seguir; 
-  1)Pedir al usuario su año de nacimiento (leerlo como String).
-  2)Convertir el año de nacimiento en un número entero.
-  3)Calcular la edad restando el año de nacimiento al año actual (2025).
-  4)Mostrar el resultado en un mensaje como "Tienes x años".
-*/
-
-String yearNacimiento = "2004";
-String nombre = "Elias";
-int convertidorInt = int.parse(yearNacimiento);
-print("El año de nacimiento es: $convertidorInt");
-int yearActual = 2025;
-int calculadoraEdad = yearActual - convertidorInt; 
-print("La edad actual de $nombre es $calculadoraEdad años" );
-
-print("\n");
+}
 
 /*
-Ejercicio N° 2 - Calculadora de Propina
-
-Objetivo:
-  Escribe un programa en Dart que calcule cuánto debe de pagar cada persona después 
-  de dividir la cuenta y agregar una propina.
-
-Pasos a seguir:
-  1)Pedir al usuario el total de la cuenta.
-  2)Pedir el porcentaje de propina a agregar.
-  3)Calcular el total a pagar sumando la propina.
-  4)Pedir el número de personas para dividir la cuenta.
-  5)Calcular cuánto debe pagar cada persona.
-  6)Mostrar el resultado en la pantalla.
-  
++-------------------------------------------------+
+|              CONDICIONAKES                      |
+|          IF-ELSE IF-ELSE-SWICHT                  |
++-------------------------------------------------+
 */
-// Primera forma, un poco líoso pero funciona; 
-double numTotalCuenta = 200000;
-print("El número total de la cuenta es: $numTotalCuenta");
-double porcentajePropina = numTotalCuenta * 0.15;
-double totalPagar = numTotalCuenta + porcentajePropina;
-print("Total a pagar con propina incluido: $totalPagar");
-const cantidadPersonas = 4; 
-double totalPagarXPersona = totalPagar / cantidadPersonas;
-print("Si están $cantidadPersonas cada uno debe de pagar: $totalPagarXPersona");
 
-print("\n");
-
-// Segunda forma de hacer;
-double total_Pagar = 20000; 
-double Propina = 0.15;
-int numPersonas = 4; 
-
-double precioConPropina = (total_Pagar * (Propina/100) + total_Pagar);
-String resultadoFinal = (precioConPropina/numPersonas).toStringAsFixed(2);
-
-print("El precio total a pagar sumado la propina es: $precioConPropina. Cada persona debe de pagar $resultadoFinal");
-
-print("\n"); 
-
-
-// Entrada de Datos: 
+void condicionales (List<String> arguments){
+  // Entrada de Datos: 
 print("Introduce tu año de nacimiento: ");
 String nacimiento = stdin.readLineSync()!;
 print("Tu año de nacimiento es: $nacimiento");
@@ -269,6 +255,79 @@ switch(numeroMes){
 }
 
 print("\n");
+}
+
+/*
++-------------------------------------------------+
+|              EJERCICIOS DE LÓGICA               |
++-------------------------------------------------+
+*/
+
+void ejercicios(List<String> arguments){
+  /*
+EJERCICIO N° 1 - Calculadora de edad
+Objetivo:
+  Escribe un programa en Dart que pida al usuario su año 
+  de nacimiento y calcule su edad actual.
+
+Pasos a seguir; 
+  1)Pedir al usuario su año de nacimiento (leerlo como String).
+  2)Convertir el año de nacimiento en un número entero.
+  3)Calcular la edad restando el año de nacimiento al año actual (2025).
+  4)Mostrar el resultado en un mensaje como "Tienes x años".
+*/
+
+String yearNacimiento = "2004";
+String nombre = "Elias";
+int convertidorInt = int.parse(yearNacimiento);
+print("El año de nacimiento es: $convertidorInt");
+int yearActual = 2025;
+int calculadoraEdad = yearActual - convertidorInt; 
+print("La edad actual de $nombre es $calculadoraEdad años" );
+
+print("\n");
+
+/*
+Ejercicio N° 2 - Calculadora de Propina
+
+Objetivo:
+  Escribe un programa en Dart que calcule cuánto debe de pagar cada persona después 
+  de dividir la cuenta y agregar una propina.
+
+Pasos a seguir:
+  1)Pedir al usuario el total de la cuenta.
+  2)Pedir el porcentaje de propina a agregar.
+  3)Calcular el total a pagar sumando la propina.
+  4)Pedir el número de personas para dividir la cuenta.
+  5)Calcular cuánto debe pagar cada persona.
+  6)Mostrar el resultado en la pantalla.
+  
+*/
+// Primera forma, un poco líoso pero funciona; 
+double numTotalCuenta = 200000;
+print("El número total de la cuenta es: $numTotalCuenta");
+double porcentajePropina = numTotalCuenta * 0.15;
+double totalPagar = numTotalCuenta + porcentajePropina;
+print("Total a pagar con propina incluido: $totalPagar");
+const cantidadPersonas = 4; 
+double totalPagarXPersona = totalPagar / cantidadPersonas;
+print("Si están $cantidadPersonas cada uno debe de pagar: $totalPagarXPersona");
+
+print("\n");
+
+// Segunda forma de hacer;
+double total_Pagar = 20000; 
+double Propina = 0.15;
+int numPersonas = 4; 
+
+double precioConPropina = (total_Pagar * (Propina/100) + total_Pagar);
+String resultadoFinal = (precioConPropina/numPersonas).toStringAsFixed(2);
+
+print("El precio total a pagar sumado la propina es: $precioConPropina. Cada persona debe de pagar $resultadoFinal");
+
+print("\n"); 
+
+
 /*
 Ejercicio N° 3 - Identificar números positivos y negativos.
 
@@ -292,5 +351,4 @@ else if (numIngresado == 0){
 else {
   print("Por favor ingrese un valor númerico");
 }
-
 }
