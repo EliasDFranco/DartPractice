@@ -4,7 +4,7 @@ import 'package:dart_application_1/dart_application_1.dart' as dart_application_
 
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-ejemplosListas();
+ejemplosSet();
 }
 
 // Creando un nuevo método para hacer nuevas cosas:
@@ -335,6 +335,33 @@ print(" Se ha añadido un nuevo elemento: $nombres2");
 
 }
 
+// SETS , aqui puedes meter todos los elementos que quiras, pero no pueden repetirse, puedes usar el add, no para reemplazar
+// Sino para agregar normal.
+void ejemplosSet(){
+  Set<String> nombres = {"Goku", "Gon", "Luffy", "Naruto"};
+  Set<String> nombres2 = {"Leorio", "Sasuke", "Kurapika", "Vegeta", "Zoro"};
+nombres.add("Goku");
+nombres2.add("Killua");
+nombres2.removeAll(nombres); // Esto eliminaod todos los elementos de un set
+bool resultado = nombres2.contains("Killua"); // Contains busca el valor que tu necesites
+if (resultado) {
+  print("Si está invitado $nombres2");
+} 
+else { 
+  print("Si está invitado $nombres2");
+}
+
+print(nombres);
+print(nombres2);
+print(nombres2.length); 
+
+List<String> buscados = ["Pablo Escobar ", "Chapo Gúzman"];
+Set<String> nuevoSetBuscados = Set.from(buscados);
+print(nuevoSetBuscados);
+
+}
+
+
 /*
 +-------------------------------------------------+
 |              EJERCICIOS DE LÓGICA               |
@@ -412,7 +439,7 @@ Ejercicio N° 3 - Identificar números positivos y negativos.
 Objetivo: 
   Escribe un programa en Dart que determine si un número es positivo, negativo o cero.
 
-*/
+*/ 
 
 print("Ingrese un número, por favor");
 int numIngresado = int.parse(stdin.readLineSync()!);
