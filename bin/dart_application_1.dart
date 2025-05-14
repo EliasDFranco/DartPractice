@@ -5,9 +5,7 @@ import 'package:dart_application_1/dart_application_1.dart' as dart_application_
 
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-bucleLista();
-bucleSet();
-bucleMap();
+ejercicioLista();
 }
 
 // Creando un nuevo método para hacer nuevas cosas:
@@ -547,4 +545,23 @@ else if (numIngresado == 0){
 else {
   print("Por favor ingrese un valor númerico");
 }
+
+}
+void ejercicioLista() {
+/*Ejercicio N° 4 - SUMA DE NÚMEROS PARES EN UNA LISTA 
+Escribe un programa en Dart que tome una lista de números enteros y calcule
+la suma de todos los números pares en la lista.
+  Ejemplo: 
+  Entrada: [1,2,3,4,5,6];
+  Salida: La suma de los números pares es: 12;
+*/
+
+List<int> num = [1,2,3,20,10,12,9];
+int resultado = 0;
+for (int x in num) {
+  if (x % 2 == 0){
+    resultado += x;
+    }
+  }
+    print("Los números pares sumandos son: $resultado");
 }
