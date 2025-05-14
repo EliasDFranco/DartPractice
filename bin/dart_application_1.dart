@@ -5,7 +5,7 @@ import 'package:dart_application_1/dart_application_1.dart' as dart_application_
 
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-ejercicioSet();
+ejercicioMap();
 }
 
 // Creando un nuevo método para hacer nuevas cosas:
@@ -586,4 +586,31 @@ for ( var x in palabrasRepetidas){
   buscadorPalabras.add(x);
 }
 print(buscadorPalabras);
+}
+
+void ejercicioMap (){
+/*
+EJERCICIO N°6 - MAP - ENCONTRAR LAS FRECUENCIAS DE PALABRAS EN MAP
+
+Objetivo: 
+  Escribe un programa en Dart que reciba una lista de palabras y cuente cuántas 
+  veces aparece cada una, almacenado en un Map.
+  
+Ejemplo:
+  Entrada: ["dart","flutter","dart","codigo","flutter","movil", "dart"]
+  Salida: {dat: 3, flutter: 3, codigo: 1, movil: 1}
+  */
+
+  List<String> palabras = ["Hola","Hola","Hola","Que tal","Que tal","Pana"];
+  Map<String, int>  palabrasContadas = {};
+
+  for (var x in palabras){
+    if (palabrasContadas.containsKey(x)){
+      palabrasContadas[x] = palabrasContadas[x]! + 1;
+    }else {
+    palabrasContadas[x] =  1;
+  }
+}
+print("$palabrasContadas.keys  $palabrasContadas.values");
+
 }
