@@ -2,10 +2,13 @@ import 'dart:ffi';
 import 'dart:io'; // Al usar stdin , automáticamente nos importa dart:io
 
 import 'package:dart_application_1/dart_application_1.dart' as dart_application_1;
-
+import 'package:dart_application_1/ClasesAutos.dart';
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-ejercicioMap();
+var cars = ClasesAutos();
+}
+
+class ClasesAutos {
 }
 
 // Creando un nuevo método para hacer nuevas cosas:
