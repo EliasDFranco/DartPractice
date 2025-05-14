@@ -5,10 +5,7 @@ import 'package:dart_application_1/dart_application_1.dart' as dart_application_
 import 'package:dart_application_1/ClasesAutos.dart';
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-var cars = ClasesAutos();
-}
-
-class ClasesAutos {
+nulabilidad();
 }
 
 // Creando un nuevo método para hacer nuevas cosas:
@@ -456,6 +453,45 @@ numeros3.forEach((key, value) {print("La clave es: $key y su valor es: $value");
 
 /*
 +-------------------------------------------------+
+|              NULABILIDAD                        |
++-------------------------------------------------+
+*/
+
+void nulabilidad(){
+ String? nombre = "Elias"; // Esta variable si contiene un dato.
+nombre = "";
+ // nombre = null; ESTO NO SE PUEDE DAR, A MENOS QUE LE PONGAMOS A LA VARIABLE QUE PUEDE SER NULA, USANDO 
+ // "?" UN SIGNO DE INTERROGACIÓN.
+
+nombre = null; // En este caso si se puede dar la nulabilidad a la variable.
+
+// Esto se usa mayoritariamente, para login, en donde el usuario puede no ingresar un dato, por ejemplo su nombre y apellido,
+// en este caso, para que la App/programa/web nos de un error, se declaran estas variables como nulas.
+
+if(nombre != null){
+print("El nombre del usuario es: $nombre");
+
+/* nombre! = En Dart, el operador de exclamación (!) después de una variable como nombre! se llama "assert non-null operator" o
+  "operador de afirmación de no nulabilidad".
+¿Qué hace exactamente?
+  Le estás diciendo al compilador:
+    “Confío en que esta variable no es nula en este punto. Así que, por favor, trátala como si fuera no nula.
+*/
+
+/*
+¿Qué significa?
+En Dart, nombre ??= "Elias"; se traduce como:
+
+"Si nombre es null, entonces asígnale el valor "Elias"."
+
+Es el operador de asignación condicional (??=).
+
+*/
+
+}
+
+/*
++-------------------------------------------------+
 |              EJERCICIOS DE LÓGICA               |
 +-------------------------------------------------+
 */
@@ -616,4 +652,5 @@ Ejemplo:
 }
 print("$palabrasContadas.keys  $palabrasContadas.values");
 
+}
 }
