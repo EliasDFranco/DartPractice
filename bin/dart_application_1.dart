@@ -5,7 +5,7 @@ import 'package:dart_application_1/dart_application_1.dart' as dart_application_
 
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-ejercicioLista();
+ejercicioSet();
 }
 
 // Creando un nuevo método para hacer nuevas cosas:
@@ -564,4 +564,26 @@ for (int x in num) {
     }
   }
     print("Los números pares sumandos son: $resultado");
+}
+
+void ejercicioSet(){
+  /*
+  EJERCICIO N° 5 - SET: FILTRAR PALABRAS ÚNICAS EN UN SET
+  
+  Objetivo: 
+    Escribe un programa en Dart que reciba una lista de palabras con algunas
+    repetidas y los almacene en un set solo las palabras únicas.
+    Luego, mostrar el conjunto resultante.
+
+  Ejemplo: 
+    Entrafda: ["Flutter", "Dart","Codigo", "Flutter", "Movil"]
+    Salida: {Dart, Movil, Codigo}
+  */
+List<String> palabrasRepetidas = ["Elias", "Elias", "Edgar", "Edgar","Fátima","Ariel", "Jade", "Jade"];
+Set<String> buscadorPalabras = {};
+
+for ( var x in palabrasRepetidas){
+  buscadorPalabras.add(x);
+}
+print(buscadorPalabras);
 }
