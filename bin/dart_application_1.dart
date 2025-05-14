@@ -1,10 +1,13 @@
+import 'dart:ffi';
 import 'dart:io'; // Al usar stdin , automáticamente nos importa dart:io
 
 import 'package:dart_application_1/dart_application_1.dart' as dart_application_1;
 
 void main(List<String> arguments) {
 // En esta función main vamos a poder llamar las otras, según la necesitemos
-ejemplosMapas();
+bucleLista();
+bucleSet();
+bucleMap();
 }
 
 // Creando un nuevo método para hacer nuevas cosas:
@@ -393,6 +396,61 @@ personas.containsValue(16);  // Para saber si existe un valor, se usa constainsV
 print(personas.values);
 
 print(personas);
+}
+
+/*
++-------------------------------------------------+
+|           BUCLES en LISTAS - SET - MAPAS        |
++-------------------------------------------------+
+*/
+
+void bucleLista(){
+List<int> numeros = [1,2,3,4,5,6,7,8,9,10];
+  // For N° 1; 
+  for (var x = 0; x < numeros.length; x++) {
+    print("Con el for básico, se puede hacer esto: ${numeros[x]}");
+  }  
+print("\n");
+  // For N°2;
+  for (var y in numeros) {
+    print("Con el for N° 2 se consigue esto: $y");
+  }
+// Ambos hacen lo mismo, solo que se llaman de distinta manera
+print("\n");
+
+// FOR EACH;
+  numeros.forEach((item) {
+    print("El número es:  $item");
+  });
+
+  numeros.forEach(print);
+
+}  
+
+void bucleSet(){
+Set<int> numeros2 = {11,12,13,14,15,16,17,18,19,20};
+for (var x in numeros2) {
+  print("Bucle for en SET: $x");
+}
+print("\n");
+
+// FOR EACH en un SET;
+  numeros2.forEach(print); // Actua de la misma forma que el de una lista
+}
+
+void bucleMap (){
+Map<String, int> numeros3 =  {
+  "FavNum": 4,
+  "Cumpleaños": 14,
+  "Año de Nacimiento": 2004,
+  "Edad": 20
+};
+for (var z in numeros3.entries){
+  print("La clave es: ${z.key} y el valor ${z.value}");
+}
+
+// FOR EACH en un Mapa; 
+numeros3.forEach((key, value) {print("La clave es: $key y su valor es: $value");});
 }
 
 /*
